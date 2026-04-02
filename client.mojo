@@ -19,7 +19,7 @@ fn main() raises:
     messages.append(msg)
     
     var payload = Python.dict()
-    payload["model"] = "gemma-4"
+    payload["model"] = "Qwen/Qwen2.5-0.5B-Instruct"
     payload["messages"] = messages
     payload["temperature"] = 0.7
 
