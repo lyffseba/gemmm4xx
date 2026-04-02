@@ -50,7 +50,7 @@ Open a **second terminal** in RunPod, clone this repo, and run the Mojo script t
 ```bash
 git clone https://github.com/lyffseba/gemmm4xx.git
 cd gemmm4xx
-mojo client.🔥
+mojo run client.mojo
 ```
 
 ---

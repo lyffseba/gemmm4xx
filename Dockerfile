@@ -34,7 +34,7 @@ RUN mkdir -p /app/models && \
 RUN git clone https://github.com/saviorand/lightbug_http.git /app/lightbug_http
 
 # Copy our Mojo server code
-COPY server.🔥 /app/server.🔥
+COPY server.mojo /app/server.mojo
 
 # Create a startup script that runs max-serve in the background and the Mojo server in the foreground
 RUN echo '#!/bin/bash\n\
@@ -47,8 +47,8 @@ export MODULAR_HOME="/root/.modular"\n\
 export PATH="/root/.modular/pkg/packages.modular.com_max/bin:$PATH"\n\
 \n\
 echo "Starting Mojo Web Server..."\n\
-# In a real environment, you might build it first: mojo build server.🔥 -I /app/lightbug_http\n\
-mojo run -I /app/lightbug_http server.🔥\n\
+# In a real environment, you might build it first: mojo build server.mojo -I /app/lightbug_http\n\
+mojo run -I /app/lightbug_http server.mojo\n\
 ' > /app/start.sh && chmod +x /app/start.sh
 
 # Expose the port the Mojo server runs on
