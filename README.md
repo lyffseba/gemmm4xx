@@ -19,22 +19,22 @@ Deploying a 26B or 31B parameter model requires significant VRAM. By utilizing a
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/lyffseba/gemma4-max-mojo.git
-cd gemma4-max-mojo
+git clone https://github.com/lyffseba/gemmm4xx.git
+cd gemmm4xx
 ```
 
 ### 2. Build the Docker Image
 The included `Dockerfile` automatically installs the Modular CLI, the MAX Engine, and sets up the Mojo environment.
 
 ```bash
-docker build -t gemma4-max-mojo .
+docker build -t gemmm4xx .
 ```
 
 *Note: In a real deployment, you should update the `Dockerfile` to pull the specific Gemma 4 GGUF weights you wish to use from Hugging Face.*
 
 ### 3. Run the Container
 ```bash
-docker run -p 8080:8080 --gpus all gemma4-max-mojo
+docker run -p 8080:8080 --gpus all gemmm4xx
 ```
 
 ### 4. Access the Interface
